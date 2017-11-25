@@ -9,6 +9,8 @@
     height: auto;
     max-height: 1000px;
     border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    resize: horizontal;
 }
 
 .editor .btn-group .btn {
