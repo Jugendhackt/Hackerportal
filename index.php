@@ -18,7 +18,6 @@
 				<input type="password" id="keyInput" placeholder="Key">
 				<input type="submit" id="keySubmit" value="Continue">
 			</form>
-			<button id="logoutBtn">Logout</button>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -30,9 +29,8 @@
 
 <?php
 	session_start();
-	if(isset($_SESSION['permLvl'])){
-		echo "Is set";
-	}else{
-		echo "Is not set";
+	if($_SESSION['permLvl'] == 5){
+		header('Location: dashboard.php', true, false ? 301 : 302);
+    	exit();
 	}
 ?>
