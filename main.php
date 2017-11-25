@@ -28,7 +28,7 @@ if($_POST && isset($_POST)){
 function login($key) {
 	if($key == "1234"){
 		session_start();
-    	$_SESSION['sid'] = 1;
+    	$_SESSION['permLvl'] = 5;
     	echo "Logged in";
 	}
 }
@@ -37,7 +37,7 @@ function logout() {
     if(session_status() == PHP_SESSION_NONE){
         session_start();
     }
-    unset($_SESSION['sid']);
+    unset($_SESSION['permLvl']);
     session_destroy();
     echo "Called logout\n";
 }

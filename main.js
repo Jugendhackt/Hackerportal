@@ -14,7 +14,17 @@ const ajax = (action, data, callback) => {
 $("#keyForm").submit((event) => {
 	var key = $("#keyInput").val();
 	if(key != ""){
-		ajax("login", {key}, (result) => {});
+		ajax("login", {key}, (result) => {
+			console.log("Logged in");
+			location.reload(true);
+		});
 	}
+	event.preventDefault();
+});
+
+$("#logoutBtn").click((event) => {
+	ajax("logout", {}, (result) => {
+		location.reload(true);
+	});
 	event.preventDefault();
 });
