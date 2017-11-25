@@ -1,4 +1,4 @@
-const ajax = (action, data, callback) => {
+const ajaxMain = (action, data, callback) => {
 	$.ajax({
 			url: 'main.php',
 			type: 'POST',
@@ -11,7 +11,7 @@ const ajax = (action, data, callback) => {
 };
 
 $("#logoutBtn").click((event) => {
-	ajax("logout", {}, (result) => {
+	ajaxMain("logout", {}, (result) => {
 		location.reload(true);
 	});
 	event.preventDefault();

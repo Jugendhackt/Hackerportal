@@ -1,6 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "10.23.41.20";
+$username = "bitte";
+$password = "1234";
 $databasename = "hackerportal";
 ?>
