@@ -14,7 +14,6 @@
 	<body>
 
 		<div id="main">
-			<button id="logoutBtn">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></button>
 			<div class="container-fluid">
 				<div class="row content">
 					<div class="col-sm-3 sidenav">
@@ -32,10 +31,11 @@
 							<li><a href="#section2">Friends</a></li>
 							<li><a href="#section3">Family</a></li>
 							<li><a href="#section3">Photos</a></li>
+							<li><a id="logoutBtn" href="#">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-9">x
+				<div class="col-sm-9">
 
 				</div>
 			</div>
@@ -44,6 +44,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="dash.js"></script>
+		<script src="articles.js"></script>
 	</body>
 
 </html>
@@ -55,4 +56,5 @@
 		header('Location: index.php', true, false ? 301 : 302);
     	exit();
 	}
+	require_once 'install.php';
 ?>
