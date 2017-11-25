@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="de">
-	
+
 	<head>
 		<title>Hackerportal - Dashboard</title>
 		<meta charset="UTF-8">
@@ -14,7 +14,7 @@
 	<body>
 
 		<div id="main">
-			<button id="logoutBtn">Logout</button>
+			<button id="logoutBtn">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></button>
 			<div class="container-fluid">
 				<div class="row content">
 					<div class="col-sm-3 sidenav">
