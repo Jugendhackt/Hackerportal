@@ -15,7 +15,7 @@ var articleId = null;
 // Basic Ajax Request
 const ajax = (action, data, callback) => {
     $.ajax({
-        url: "articleLib.php",
+        url: "../articleLib.php",
         type: "POST",
         data: {action, data},
         dataType: "text",
