@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor.wow</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="editor.css">
+    <script src="https://use.fontawesome.com/4e14f8df98.js"></script>
+</head>
+<body>
+
+<form class="editor">
+    <div class="form-group">
+        <div class="btn-group">
+            <!-- Button Groups for Italic / Bold / Underlined / Strikethrough and Headers (1 to 3 (Dropdown)) -->
+            <button class="btn btn-dark" id="btn-bold" type="button"><i class="fa fa-bold" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-italic" type="button"><i class="fa fa-italic" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-underline" type="button"><i class="fa fa-underline" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-strike" type="button"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-font" type="button"><i class="fa fa-font" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-header" type="button"><i class="fa fa-header" aria-hidden="true"></i></button>
+        </div>
+        <!-- Button Group for Align (all 4 formats) -->
+        <div class="btn-group">
+            <button class="btn btn-dark" id="btn-align-left" type="button"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-align-middle" type="button"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-align-right" type="button"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-align-justify" type="button"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+        </div>
+
+        <!-- The actual textarea (There is almost nothing here) -->
+        <textarea id="editor-window-markdown" class="form-control" placeholder="Hello World..."></textarea>
+    </div>
+</form>
+
+<!-- Scripts to be loaded -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="editor.js"></script>
+</body>
+</html>
