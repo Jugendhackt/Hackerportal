@@ -15,10 +15,7 @@ if($_POST && isset($_POST)){
 	    $data = $_POST['data'];
 	}
 	switch($action){
-		case "test":
-			editArticle("Test3", "Test3", 2);
-			die();
-	    case "create":
+		case "create":
 	    	echo "Creating new Article, id: ";
 	    	echo createArticle($data['title'], $data['author'], $data['content']);
 	        die();

@@ -1,6 +1,6 @@
 const ajax = (action, data, callback) => {
 	$.ajax({
-			url: 'articleLib.php',
+			url: 'main.php',
 			type: 'POST',
 			data: {action, data},
 			dataType: 'text',
@@ -11,8 +11,8 @@ const ajax = (action, data, callback) => {
 };
 
 $("#logoutBtn").click((event) => {
-	ajax("test", {}, (result) => {
-		//location.reload(true);
+	ajax("logout", {}, (result) => {
+		location.reload(true);
 	});
 	event.preventDefault();
 });
