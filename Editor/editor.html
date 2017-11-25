@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Editor.wow</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="editor.css">
     <script src="https://use.fontawesome.com/4e14f8df98.js"></script>
 </head>
 <body>
 
-<form class="editor">
+<div class="editor">
     <div class="form-group">
         <!-- Other Information like Author and Title -->
+        <label for="editor-title">Title:</label><input class="form-control" id="editor-title" name="editor-title" placeholder="Title" type="text">
+        <label for="editor-author">Author:</label><input class="form-control" id="editor-author" name="editor-author" placeholder="Author" type="text">
 
+    </div>
+    <div class="form-group">
 
         <div class="btn-group">
             <!-- Button Groups for Italic / Bold / Underlined / Strikethrough and Headers (1 to 3 (Dropdown)) -->
@@ -33,12 +37,15 @@
 
         <!-- The actual textarea (There is almost nothing here) -->
         <textarea id="editor-window-markdown" class="form-control" placeholder="Hello World..."></textarea>
+
     </div>
-</form>
+        <button type="button" class="form-control btn btn-primary" onclick="submit()">Hinzufügen</button>
+</div>
 
 <!-- Scripts to be loaded -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="editor.js"></script>
 </body>
 </html>

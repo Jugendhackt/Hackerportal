@@ -27,7 +27,7 @@ const ajax = (action, data, callback) => {
 
 
 // Function to Autoresize the TextArea
-textForm.addEventListener("keypress", (event) => {
+textForm.addEventListener("keydown", (event) => {
     console.log("HI");
     textForm.style.height = 'auto';
     textForm.style.height = textForm.scrollHeight + "px";
@@ -72,12 +72,14 @@ $("#btn-underline").click(BasicMarkupHandler("[underline]", "[/underline]"));
 $("#btn-strike").click(BasicMarkupHandler("[strike]", "[/strike]"));
 
 
-if(newMode){
-    ajax("create", {title: title.value, author: author.value, content: textForm.value}, (result) => {
-        console.log(result);
-    });
-} else {
-    if(!articleId == null){
+function submit(){
+    if(newMode){
+        ajax("create", {title: title.value, author: author.value, content: textForm.value}, (result) => {
+            console.log(result);
+        });
+    } else {
+        if(!articleId == null){
 
+        }
     }
 }
