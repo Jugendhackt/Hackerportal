@@ -14,12 +14,23 @@
 	<body>
 
 		<div id="main">
-
+			<form id="keyForm">
+				<input type="password" id="keyInput" placeholder="Key">
+				<input type="submit" id="keySubmit" value="Continue">
+			</form>
 		</div>
 
-		<script src="https://use.fontawesome.com/2beeaf0fcf.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
 	</body>
 
 </html>
+
+<?php
+	session_start();
+	if($_SESSION['permLvl'] == 5){
+		header('Location: dashboard.php', true, false ? 301 : 302);
+    	exit();
+	}
+?>
