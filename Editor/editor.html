@@ -9,11 +9,25 @@
 </head>
 <body>
 
+<div id="error-alert" class="alert alert-danger alert-dismissible fade hidden" role="alert">
+    <strong>ERROR!</strong> Fehler beim hochladen des Artikels! Siehe Konsole für mehr Info.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div id="error-alert-missing" class="alert alert-danger alert-dismissible fade hidden" role="alert">
+    <strong>ERROR!</strong> Fehler beim hochladen des Artikels! Fehlende Daten!g
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
 <div class="editor">
     <div class="form-group">
         <!-- Other Information like Author and Title -->
-        <label for="editor-title">Title:</label><input class="form-control" id="editor-title" name="editor-title" placeholder="Title" type="text">
-        <label for="editor-author">Author:</label><input class="form-control" id="editor-author" name="editor-author" placeholder="Author" type="text">
+        <label for="editor-title">Title:</label><input required maxlength="50" class="form-control" id="editor-title" name="editor-title" placeholder="Title" type="text">
+        <label for="editor-author">Author:</label><input required maxlength="50" class="form-control" id="editor-author" name="editor-author" placeholder="Author" type="text">
 
     </div>
     <div class="form-group">
@@ -24,6 +38,7 @@
             <button class="btn btn-dark" id="btn-italic" type="button"><i class="fa fa-italic" aria-hidden="true"></i></button>
             <button class="btn btn-dark" id="btn-underline" type="button"><i class="fa fa-underline" aria-hidden="true"></i></button>
             <button class="btn btn-dark" id="btn-strike" type="button"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+            <button class="btn btn-dark" id="btn-code" type="button"><i class="fa fa-code" aria-hidden="true"></i></button>
             <button class="btn btn-dark" id="btn-font" type="button"><i class="fa fa-font" aria-hidden="true"></i></button>
             <button class="btn btn-dark" id="btn-header" type="button"><i class="fa fa-header" aria-hidden="true"></i></button>
         </div>
@@ -36,7 +51,7 @@
         </div>
 
         <!-- The actual textarea (There is almost nothing here) -->
-        <textarea id="editor-window-markdown" class="form-control" placeholder="Hello World..."></textarea>
+        <textarea required id="editor-window-markdown" class="form-control" placeholder="Hello World..."></textarea>
 
     </div>
         <button type="button" class="form-control btn btn-primary" onclick="submit()">Hinzufügen</button>
@@ -47,5 +62,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="editor.js"></script>
+<script src="parser.js"></script>
 </body>
 </html>
