@@ -119,15 +119,8 @@ function submit() {
     if ($("#textForm").val() !== "" && $("#editor-author").val() !== "" && $("#editor-title").val() !== "") {
         if (newMode) {
             ajax("create", {title: title.value, author: author.value, content: textForm.value}, (result) => {
-                if (isNaN(result)) {
-                    window.location.pathname = "article.php?=" + result;
-                } else {
-                    $("#error-alert").alert();
-                    console.log(result);
-                }
+                    window.location.pathname = "../";
             });
         }
-    } else {
-        $("#error-alert-missing".alert());
     }
 }
