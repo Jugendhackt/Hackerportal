@@ -65,20 +65,14 @@ const loadCards = (amount) => {
 
 loadCards(20);
 
-$("#searchForm").submit((event) => {
-	$("#searchButton").click();
-	event.preventDefault();
-});
-
-$("#searchButton").click(() => {
-	var searchVal = $("#searchField").val();
+const loadSearches = (searchVal) => {
 	$("#dash-blog").empty();
 	if(searchVal != ""){
 		ajax("getAllArticles", {}, (ids) => {
 			const json = JSON.parse(ids);
 			for(var i = 0; i < json.length; i++){
 				ajaxId("getTitle", {id: json[i]}, json[i], (title, id) => {
-					if(title.includes(searchVal)){
+					if(title.toLowerCase().includes(searchVal.toLowerCase())){
 						console.log("found mathing title in " + id);
 						genCard(id);
 					}else{
@@ -96,4 +90,9 @@ $("#searchButton").click(() => {
 	}else{
 		loadCards(20);
 	}
+}
+
+$("#searchForm").submit((event) => {
+	loadSearches($("#searchField").val());
+	event.preventDefault();
 });
