@@ -1,4 +1,4 @@
-function ajax(action, data, callback){
+const ajax = (action, data, callback) => {
 	$.ajax({
 			url: 'articleLib.php',
 			type: 'POST',
@@ -10,7 +10,7 @@ function ajax(action, data, callback){
 		});
 };
 
-function ajaxId(action, data, id, callback){
+const ajaxId = (action, data, id, callback) => {
 	$.ajax({
 			url: 'articleLib.php',
 			type: 'POST',
@@ -32,7 +32,19 @@ const genCard = (id) => {
 										<div class='card-body'> \
 											<h4 class='card-title'>" + title + "</h4> \
 											<p class='card-text'>" + clearParse(content).substr(0, 60) + "...</p> \
-											<a href='#' class='btn btn-primary'>Go to Article <i class='fa fa-arrow-right' aria-hidden='true'></i></a> \
+											<button type='button' class='btn btn-primary' data-toggle='modal' data-target='.article" + id + "'>Go to Article <i class='fa fa-arrow-right' aria-hidden='true'></i></button> \
+										</div> \
+									</div>");
+			$("#dash-blog").append("<div class='modal fade article" + id + "' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'> \
+										<div class='modal-dialog modal-lg'> \
+											<div class='modal-content'> \
+												<div class='modal-header'> \
+													<h5 class='modal-title' id='exampleModalLabel'>" + title + "</h5> \
+												</div> \
+												<div class='modal-body'> \
+													" + bbcParse(content) +" \
+												</div> \
+											</div> \
 										</div> \
 									</div>");
 		});
@@ -69,7 +81,7 @@ $("#searchButton").click(() => {
 					}else{
 						ajaxId("getContent", {id}, id, (content, id) => {
 							const parsed = clearParse(content);
-							if(content.includes(searchVal)){
+							if(parsed.includes(searchVal)){
 								console.log("found matching content in " + id);
 								genCard(id);
 							}
