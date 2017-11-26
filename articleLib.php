@@ -16,7 +16,6 @@ if($_POST && isset($_POST)){
 	}
 	switch($action){
 		case "create":
-	    	echo "Creating new Article, id: ";
 	    	echo createArticle($data['title'], $data['author'], $data['content']);
 	        die();
 	    case "edit":
@@ -34,8 +33,14 @@ if($_POST && isset($_POST)){
 	   	case "getEditDate":
 	   		echo getEditDate(($data['id']));
 	   		die();
-	   	case "getData":
-
+	   	case "getArticleCount":
+	   		echo getArticleCount();
+	   		die();
+	   	case "getArticles":
+	   		print_r(getArticles($data['amount']));
+	   		die();
+	   	case "getAllArticles":
+	   		print_r(getAllArticles());
 	   		die();
 	}
 }
@@ -76,6 +81,22 @@ function getEditDate($id){
 function getContent($id){
 	global $pdo;
 	return $pdo->query("SELECT Content FROM articles WHERE ID = '$id'")->fetchColumn();
+}
+
+function getArticles($amount){
+	global $pdo;
+	return json_encode($pdo->query("SELECT ID FROM articles LIMIT $amount")->fetchAll(PDO::FETCH_COLUMN, 0));
+}
+
+function getAllArticles(){
+	global $pdo;
+	return json_encode($pdo->query("SELECT ID FROM articles")->fetchAll(PDO::FETCH_COLUMN, 0));
+}
+
+function getArticleCount(){
+	global $pdo;
+	$table = $pdo->query("SELECT * FROM articles")->fetchAll();
+	return count($table);
 }
 
 ?>

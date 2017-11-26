@@ -1,4 +1,38 @@
 .sidenav {
 	background-color: #f1f1f1;
 	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 1%;
+	border-radius: .25em;
+}
+
+.form-control:focus {
+	border-color: #ced4da;
+	box-shadow: 0 0 0 0;
+}
+
+.sidenav h4 {
+	text-align: center;
+}
+
+.sidenav a {
+	border-radius: 0 !important;
+}
+
+.sidenav a:hover {
+	background-color: #e1e1e1;
+	color: #007bff;
+}
+
+#searchField {
+	width: 100%;
+}
+
+.card {
+	min-width: 0;
+	margin-top: 1%;
+	margin-bottom: 2.5%;
 }

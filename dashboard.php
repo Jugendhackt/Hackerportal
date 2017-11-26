@@ -16,25 +16,29 @@
 		<div id="main">
 			<div class="container-fluid">
 				<div class="row content">
-					<div class="col-sm-3 sidenav">
-						<h4>Hackerportal</h4>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search Articles..">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									<span class="glyphicon glyphicon-search"></span>
-								</button>
-							</span>
-						</div><br>
-						<ul class="nav nav-pills flex-column">
-							<li class="nav-item"><a class="nav-link active" href="#section1">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#section2">Friends</a></li>
-							<li class="nav-item"><a class="nav-link" href="#section3">Family</a></li>
-							<li class="nav-item"><a class="nav-link" href="#section3">Photos</a></li>
-							<li class="nav-item"><a class="nav-link" id="logoutBtn" href="#">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-						</ul>
+					<div class="col-sm-3">
+						<div class="sidenav">
+							<h4>Hackerportal</h4>
+							<div class="input-group">
+								<form id="searchForm">
+									<input type="text" class="form-control" id="searchField" placeholder="Search Articles..">
+								</form>
+								<span class="input-group-btn">
+									<button class="btn btn-primary" id="searchButton" type="button">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+								</span>
+							</div><br>
+							<ul class="nav nav-pills flex-column">
+								<li class="nav-item"><a class="nav-link active" href="#section1">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#section2">Friends</a></li>
+								<li class="nav-item"><a class="nav-link" href="#section3">Family</a></li>
+								<li class="nav-item"><a class="nav-link" href="#section3">Photos</a></li>
+								<li class="nav-item"><a class="nav-link" id="logoutBtn" href="#">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
 					</div>
-					<div class="col-sm-9" id="dash-blog" style="float:right">
+					<div class="col-sm-9" id="dash-blog">
 						
 					</div>
 				</div>
@@ -45,6 +49,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 		<script src="dash.js"></script>
+		<script src="/Editor/parser.js"></script>
 		<script src="articles.js"></script>
 	</body>
 
