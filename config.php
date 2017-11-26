@@ -1,5 +1,5 @@
 <?php
-$servername = "10.23.41.183";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "mysqlpi01";
 $databasename = "hackerportal";
