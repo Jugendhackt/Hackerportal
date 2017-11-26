@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <html lang="de">
 
@@ -25,12 +25,14 @@
 		<script src="main.js"></script>
 	</body>
 
-</html>
+</html> -->
 
 <?php
 	session_start();
 	if($_SESSION['permLvl'] == 5){
 		header('Location: dashboard.php', true, false ? 301 : 302);
     	exit();
+	}else{
+		header('Location: login.html');
 	}
 ?>
