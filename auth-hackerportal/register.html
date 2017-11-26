@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Auth</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <div class="card-header">Register an Account</div>
+            <div class="card-body">
+                <form id="registerForm" action="./php/register.php">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group control-group">
+                                <label class="control-label" for="fname">First name</label>
+                                <div class="controls">
+                                    <input class="form-control" id="fname" type="text" aria-describedby="nameHelp" placeholder="Enter first name" required>
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group control-group">
+                                <label class="control-label" for="lname">Last name</label>
+                                <div class="controls">
+                                    <input class="form-control" id="lname" type="text" aria-describedby="nameHelp" placeholder="Enter last name" required>
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group control-group">
+                        <label class="control-label" for="email" class="control-label">Email address</label>
+                        <div class="controls">
+                            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" required data-validation-ajax-ajax="./php/mail.php" >
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group control-group">
+                                <label class="control-label" for="password">Password</label>
+                                <div class="controls">
+                                    <input name="password1" class="form-control" id="password" type="password" placeholder="Password" minlength="10" maxlength="20" required>
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group control-group">
+                                <label class="control-label" for="password2">Confirm Password</label>
+                                <div class="controls">
+                                    <input class="form-control" id="password2" type="password" placeholder="Password" data-validation-match-match="password1" required>
+                                    <p class="help-block"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="login.html">Login Page</a>
+                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+                </div>
+                <div class="modal-body" id="exampleModalBody"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Try Again</button>
+                    <a class="btn btn-primary" href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="js/register.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+</body>
+
+</html>
