@@ -4,6 +4,7 @@ Todo List
 - [ ] Implement NodeJS API
 - [ ] Implement Highlight.JS
 - [ ] add missing Design Elements
+- [ ] Improve Modal Design
 
 ## Contributor
 - Mastermori
