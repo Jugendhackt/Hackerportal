@@ -1,5 +1,5 @@
 <?php
-$ekey = $_POST['key'];
+$key = $_POST['key'];
 
 if ($key == "1234") {
     session_start();
