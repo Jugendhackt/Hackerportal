@@ -27,8 +27,29 @@
 	color: #007bff;
 }
 
+#navbar {
+	width: 20%;
+}
+
+#contentWrapper {
+	width: 80%;
+	float: right;
+}
+
 #searchField {
 	width: 100%;
+}
+
+#article {
+	width: 90%;
+	border: 1px solid #e1e1e1;
+	border-radius: .25em;
+	box-shadow: .1em .1em .1em #888888;
+	margin: 0 auto;
+}
+
+#article h1 {
+	margin-bottom: 1em;
 }
 
 .card {

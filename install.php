@@ -16,7 +16,7 @@ if(!tableExists($pdo, "articles")){
     $pdo->exec("
         CREATE TABLE articles(
         ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
-        Content TEXT( 50 ) NOT NULL,
+        Content TEXT NOT NULL,
         Author VARCHAR( 50 ) NOT NULL,
         EditDate TIMESTAMP( 3 ) NOT NULL,
         Title VARCHAR( 50 ) NOT NULL);
