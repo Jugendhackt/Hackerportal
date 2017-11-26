@@ -116,7 +116,7 @@ $("#btn-code").click(BasicMarkupHandler("[code()]", "[/code]", -2));
 
 // Final Function to submit it.
 function submit() {
-    if ($("#textForm").value() !== "" && $("#editor-author").value() !== "" && $("#editor-title").value() !== "") {
+    if ($("#textForm").val() !== "" && $("#editor-author").val() !== "" && $("#editor-title").val() !== "") {
         if (newMode) {
             ajax("create", {title: title.value, author: author.value, content: textForm.value}, (result) => {
                 if (isNaN(result)) {
