@@ -13,6 +13,7 @@ function bbcParse(text){
     text = text.replace(/\[\/strike\]/gi,'</s>');
     text = text.replace(/\[code()\]/gi,'<pre><code class="">');
     text = text.replace(/\[\/code\]/gi,'</pre></code>');
+    text = text.replace(/\[br\]/gi, '<br>');
     return text;
 }
 
@@ -26,5 +27,6 @@ function clearParse(text){
     text = text.replace(/\[strike\]/gi,'');
     text = text.replace(/\[\/strike\]/gi,'');
     text = text.replace(/\[code(java)\]/gi, '');
+    text = text.replace(/\[br\]/gi, '<br>');
     return text;
 }
