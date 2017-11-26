@@ -32,7 +32,7 @@ const genCard = (id) => {
 										<div class='card-body'> \
 											<h4 class='card-title'>" + title + "</h4> \
 											<p class='card-text'>" + clearParse(content).substr(0, 60) + "...</p> \
-											<button type='button' class='btn btn-primary' data-toggle='modal' data-target='.article" + id + "'>Go to Article <i class='fa fa-arrow-right' aria-hidden='true'></i></button> \
+											<button type='button' class='btn btn-primary' data-toggle='modal' data-backdrop='static' data-target='.article" + id + "'>Go to Article <i class='fa fa-arrow-right' aria-hidden='true'></i></button> \
 										</div> \
 									</div>");
 			$("#dash-blog").append("<div class='modal fade article" + id + "' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'> \
@@ -40,6 +40,9 @@ const genCard = (id) => {
 											<div class='modal-content'> \
 												<div class='modal-header'> \
 													<h5 class='modal-title' id='exampleModalLabel'>" + title + "</h5> \
+													<button type='button' class='close' data-dismiss='modal' aria-label='Close'> \
+														<span aria-hidden='true'>&times;</span> \
+													</button> \
 												</div> \
 												<div class='modal-body'> \
 													" + bbcParse(content) +" \
