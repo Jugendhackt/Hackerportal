@@ -25,3 +25,16 @@ $("#loginForm").submit(function(event) {
         document.getElementById("exampleModalBody").innerHTML = "An error occurred with you device/browser. You can try again to login.";
 })
 });
+
+$("#noKeyBtn").click((event) => {
+    $.ajax({
+        url: 'main.php',
+        type: 'POST',
+        data: {action: "noKey", data: {}},
+        dataType: 'text',
+        success: function(result){
+            window.location.href = "dashboard.php";
+        }
+    });
+    event.preventDefault();
+});

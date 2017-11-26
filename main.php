@@ -19,10 +19,18 @@ if($_POST && isset($_POST)){
         	login($data['key']);
             die();
         case "logout":
-            echo "calling logout";
             logout();
             die();
+        case "noKey":
+        	noKey();
+        	die();
     }
+}
+
+function noKey(){
+	session_start();
+	$_SESSION['permLvl'] = 1;
+	echo 'Logged in';
 }
 
 function login($key) {
@@ -39,7 +47,7 @@ function logout() {
     }
     unset($_SESSION['permLvl']);
     session_destroy();
-    echo "Called logout\n";
+    echo "Logged out";
 }
 
 ?>
