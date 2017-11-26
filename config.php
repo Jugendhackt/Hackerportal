@@ -1,6 +1,6 @@
 <?php
-$servername = "10.81.233.179";
-$username = "bitte";
-$password = "1234";
+$servername = "10.23.41.183";
+$username = "root";
+$password = "mysqlpi01";
 $databasename = "hackerportal";
 ?>
