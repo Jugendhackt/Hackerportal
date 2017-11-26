@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['permLvl']) || $_SESSION['permLvl'] < 1){
-		header('Location: index.php', true, false ? 301 : 302);
+		  header('Location: index.php', true, false ? 301 : 302);
     	exit();
 	}
 	require_once 'install.php';
@@ -27,7 +27,7 @@
 						<?php include_once 'navbar.php';?>
 					</div>
 					<div class="col-sm-9" id="dash-blog">
-						
+
 					</div>
 				</div>
 			</div>

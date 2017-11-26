@@ -30,9 +30,10 @@
 <?php
 	session_start();
 	if($_SESSION['permLvl'] == 5){
-		header('Location: dashboard.php', true, false ? 301 : 302);
+			header('Location: dashboard.php', true, false ? 301 : 302);
     	exit();
 	}else{
-		header('Location: login.html');
+		header('Location: login.html', true, false ? 301 : 302);
+		exit();
 	}
 ?>
